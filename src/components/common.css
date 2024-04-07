@@ -1,0 +1,22 @@
+/**
+ * Variables for components theme configurable.
+ *
+ * This CSS will be isolated in the components. And it will
+ * provide a default theme, while allowing the user to override
+ * it with variables in CSS outside of the components.
+ */
+
+/* noinspection CssUnresolvedCustomProperty */
+:host {
+  /* Default color triplets (can NOT be write in default argument of var) */
+  --default-color-primary: 30, 253, 167;
+  --default-border-radius: 0.25rem;
+
+  /* Configurable values */
+  --color-primary: var(--jade-ui-color-primary, var(--default-color-primary));
+  --border-radius: var(--jade-ui-border-radius, var(--default-border-radius));
+
+  /* Common styles */
+  --background-color-primary: rgba(var(--color-primary), 0.1);
+  --border-color-primary: rgba(var(--color-primary), 0.9);
+}
