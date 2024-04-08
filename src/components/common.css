@@ -9,14 +9,16 @@
 /* noinspection CssUnresolvedCustomProperty */
 :host {
   /* Default color triplets (can NOT be write in default argument of var) */
-  --default-color-primary: 30, 253, 167;
-  --default-border-radius: 0.25rem;
+  --default-primary: 30, 200, 120;
 
-  /* Configurable values */
-  --color-primary: var(--jade-ui-color-primary, var(--default-color-primary));
-  --border-radius: var(--jade-ui-border-radius, var(--default-border-radius));
+  /* Default sizes */
+  --default-radius: 0.25rem;
+
+  /* Configurable values with fallback to default */
+  --component-primary: var(--primary, var(--default-primary));
+  --component-radius: var(--radius, var(--default-radius));
 
   /* Common styles */
-  --background-color-primary: rgba(var(--color-primary), 0.1);
-  --border-color-primary: rgba(var(--color-primary), 0.9);
+  --background-color-primary: rgba(var(--component-primary), 0.4);
+  --border-color-primary: rgba(var(--component-primary), 0.9);
 }
