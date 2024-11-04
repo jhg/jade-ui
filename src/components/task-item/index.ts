@@ -1,7 +1,12 @@
-import {LitElement, html, css, unsafeCSS} from 'lit';
-import {customElement, property} from 'lit/decorators.js';
+/**
+ * @license
+ * Copyright 2024
+ * SPDX-License-Identifier: Unlicense
+ */
 
-import theme from '../common.css?inline';
+import { LitElement, html, css } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
+import { theme } from '@shared/utils';
 
 
 @customElement('task-item')
@@ -14,7 +19,7 @@ export class TaskItem extends LitElement {
     completed: boolean = false;
 
     static styles = [
-        unsafeCSS(theme),
+        theme,
         css`
             :host {
                 display: block;

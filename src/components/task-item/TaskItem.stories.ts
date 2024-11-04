@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/web-components';
 //import { fn } from '@storybook/test';
 
-import "./TaskItem";
+import "@components/task-item";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 const meta: Meta = {
